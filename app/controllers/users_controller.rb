@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 			p "*********************** #{@user.checksum} ***************************"
 		end
 		if @user.save
+			flash[:success] = "Welcome to fAuth"
 			redirect_to @user
 		else
 			render 'new'

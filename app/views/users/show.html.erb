@@ -1,6 +1,11 @@
-<h3> Username:  <%= @user.name %> , 
+<div >
+
+<h3> Username:  <%= @user.name %> <br>
      Email: <%= @user.email %> </h3>
 
 
 <br>
-<h3> Bcrypthash(user's password): <%= @user.password_digest %> </h3>	
+	
+	<h3> Bcrypt hash(user's password): <%= @user.password_digest %> </h3>	
+	<h4 class="sha512"> SHA512 checksum of file <%= @user.checksum %> </h4>
+</div>

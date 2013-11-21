@@ -171,3 +171,9 @@ input {
   @extend .control-group;
   @extend .error;
 }
+
+.sha512{
+  width: 750px;
+  word-wrap: break-word;
+  overflow: auto;
+}
