@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 			cs   = Digest::SHA512.hexdigest( File.read(file.path))
 		end
 		if user && user.authenticate(params[:session][:password]) && user.valid_checksum(cs)
-			flash.now[:success] = "Gratz bro"
+			flash.[:success] = "Successful sign in!"
 			#signin user
 			redirect_to user
 		# Sign the user in and redirect to the user's show page.
