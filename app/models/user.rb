@@ -8,4 +8,8 @@ class User < ActiveRecord::Base
 	uniqueness: { case_sensitive: false }
 	has_secure_password
 	validates :password, length: { minimum: 6 }
+
+	def valid_checksum(cs)
+		cs == self.checksum
+	end
 end
