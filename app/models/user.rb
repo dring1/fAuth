@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 	validates :password, length: { minimum: 6 }
 
 	def valid_checksum(cs)
-		cs == self.checksum
+		cs
+		 == self.checksum
 	end
 end

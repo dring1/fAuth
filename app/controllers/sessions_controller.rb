@@ -13,7 +13,6 @@ class SessionsController < ApplicationController
 			flash[:success] = "Successful authentication!"
 			#signin user
 			redirect_to user
-		# Sign the user in and redirect to the user's show page.
 		else
 			flash.now[:error] = 'Invalid email/password/file combination' # Not quite right!
       		render 'new'
