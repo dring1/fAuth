@@ -4,4 +4,6 @@ fAuth - Rails App Developed by Devon Ring for COMP4109.
 This a purely academic application.
 
 == Clone & Run
-That simple.
+*Bundle install
+*bundle exec rake db:migrate
+*rails server
