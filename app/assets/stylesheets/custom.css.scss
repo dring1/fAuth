@@ -177,3 +177,18 @@ input {
   word-wrap: break-word;
   overflow: auto;
 }
+
+
+.output-table{
+  table-layout: fixed;
+  word-wrap: break-word;
+  overflow: auto;
+  width: 900px;
+}
+.colSHA{
+  word-wrap: break-word;
+  overflow: auto;
+}
+th,td{
+   width: 300px;
+}

@@ -10,7 +10,15 @@ class SessionsController < ApplicationController
 			cs   = Digest::SHA512.hexdigest( File.read(file.path))
 		end
 		if user && user.authenticate(params[:session][:password]) && user.valid_checksum(cs)
-			flash[:success] = "Successful authentication!"
+			flash[:success] = "Successful authentication!" 
+
+			#after successful login display the contents of param to show users
+			s = ""
+			params[:session].each{ |param|
+				s += "#{param} \n"
+			}
+			flash[:warning] = "#{s}".html_safe
+			
 			#signin user
 			redirect_to user
 		else

@@ -1,3 +1,16 @@
-<% for User.each do %>
+<h3>Displaying all user contents</h3> <p> For academic purposes!</p>	
 
-<end>
+<table class="table table-striped output-table">
+	<tr>
+		<th>Email</th>
+		<th>Password digest(bCrypt)</th>
+		<th>Checksum (SHA512)</th>
+	</tr>
+	<% @users.each do |f| %>
+		<tr>
+			<td ><%=	f.email %></td>
+			<td ><%=	f.password_digest %></td>
+			<%= content_tag(:td, f.checksum)%>
+		</tr>	
+	<% end %>
+</table>
