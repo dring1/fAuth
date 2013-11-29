@@ -7,3 +7,5 @@ This a purely academic application.
 1. Bundle install
 2. bundle exec rake db:migrate
 3. rails server
+
+== Lisence MIT
