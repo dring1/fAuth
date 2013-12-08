@@ -9,10 +9,7 @@ class UsersController < ApplicationController
 		@file = params[:user][:checksum]
 		if @file
 			#compute the SHA512 hash of a the uploaded file
-			#if file is blank -> give user a token file
-			#file_cs = Digest::SHA512.hexdigest( File.read(@file.path))
-			@user.checksum = Digest::SHA512.hexdigest( File.read(@file.path))
-			
+			@user.checksum = Digest::SHA512.hexdigest(File.read(@file.path))
 			#output to server the checksum of 
 			p "*********************** #{@user.checksum} ***************************"
 		end

@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(email: params[:session][:email].downcase)
+		user = User.find_by( email: ['email = ?',params[:session][:email].downcase])
 		file = params[:session][:checksum]
 		if file
 			cs   = Digest::SHA512.hexdigest( File.read(file.path))
